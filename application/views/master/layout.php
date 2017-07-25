@@ -1,7 +1,7 @@
 <?php 
-	$this->load->view('payslip/template/header');
+	$this->load->view('template/header');
 	
 	$this->load->view($content);
 
-	$this->load->view('payslip/template/scripts');
+	$this->load->view('template/scripts');
 ?>
