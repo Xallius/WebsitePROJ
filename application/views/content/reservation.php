@@ -1,4 +1,4 @@
-<img id=box src="box.jpg">
+<img id=box src="<?php echo base_url('assets/img/box.jpg'); ?>">
 <h2 id=reserve> Book an Appointment</h2>
 <name id= rservices>Service/s:</name>
 <select name=roptions id=roptions1>
