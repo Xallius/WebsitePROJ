@@ -11,16 +11,15 @@
     <!-- this is the navbar.. -->
     <div id="navbar">
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
-            
             <div class="collapse navbar-collapse" id="navbar-collapse-">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="reservation.html">Reservations</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li style="float:right;"><a id= acc1 href="signup.php">Sign Up</a></li>
-                    <li style="float:right;"><a id= acc2 href="login.html">Log-in</a></li>
+                    <li><a href="<?php echo base_url('index.php/Main'); ?>">Home</a></li>
+                    <li><a href="<?php echo base_url('index.php/Main/about'); ?>">About Us</a></li>
+                    <li><a href="<?php echo base_url('index.php/Main/services'); ?>">Services</a></li>
+                    <li><a href="<?php echo base_url('index.php/Main/reservation'); ?>">Reservations</a></li>
+                    <li><a href="<?php echo base_url('index.php/Main/gallery'); ?>">Gallery</a></li>
+                    <li style="float:right;"><a id= acc1 href="<?php echo base_url('index.php/Main/signup'); ?>">Sign Up</a></li>
+                    <li style="float:right;"><a id= acc2 href="<?php echo base_url('index.php/Main/login'); ?>">Log-in</a></li>
                 </ul>
             </div>
         </nav>
