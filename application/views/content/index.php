@@ -2,7 +2,7 @@
 <h2 id="test2"><strong>Get Your Stylish Look Today</strong></h2>
 <p id="p2">We at JO n Jud8 Salon believe that a strong psychological link exists between looking your best and feeling confident about yourself. JO n Jud8 Salon offers a complete salon services for men and women to pamper the body and spirit.</p>
 <br>
-<a id="button1" href="<?php echo base_url('index.php/services'); ?>"><button id="button2" type="button" class="btn btn-primary btn-lg pull-center">Make an Appointment </button></a>
+<a id="button1" href="<?php echo base_url('index.php/Main/services'); ?>"><button id="button2" type="button" class="btn btn-primary btn-lg pull-center">Make an Appointment </button></a>
 <div class=popservices>
     <br>
     <h2 id=popser>Popular Services</h2>
@@ -21,10 +21,10 @@
     <b>Best Stylist</b><br>
     We have the best stylists to
     bring out the best feautures in every client to boost their confidence.
-    <a id="button3" href="<?php echo base_url('index.php/about'); ?>"><button id="button4" type="button" class="btn btn-primary btn-lg pull-center">Learn More </button></a>
+    <a id="button3" href="<?php echo base_url('index.php/Main/about'); ?>"><button id="button4" type="button" class="btn btn-primary btn-lg pull-center">Learn More </button></a>
 </p>
 <p id=b2>
-    <img src="email.png"><br>
+    <img src="<?php echo base_url('assets/img/email.png'); ?>"><br>
     <b>Contact</b><br>
     JOnJud8@gmail.com<br>
     Fb.com/JOnJud8Salon<br>
@@ -34,15 +34,15 @@
     St. Brgy Zone 1
 </p>
 <p id=b3>
-    <img src="clock.png"><br>
+    <img src="<?php echo base_url('assets/img/clock.png'); ?>"><br>
     <b>Store Hours</b><br>
     Mon &amp; Tue: 9:00am to 7:00pm<br>
     Wed &amp; Thu: 10:00am to 8:00pm<br>
     Fri &amp; Sat: 9:00am to 9:00pm<br>
 </p>
 <p id=b4>
-    <img src="award.png"><br>
+    <img src="<?php echo base_url('assets/img/award.png'); ?>"><br>
     <b>#1 Salon</b><br>
     We were the champion in the HMAU competition of Hair Asia and won multiple awards.
-    <a id="button5" href=/APPOINTMENT%20SYSTEM/E/about.html><button id="button6" type="button" class="btn btn-primary btn-lg pull-center">Learn More </button></a>
+    <a id="button5" href="<?php echo base_url('index.php/Main/about'); ?>"><button id="button6" type="button" class="btn btn-primary btn-lg pull-center">Learn More </button></a>
 </p>
