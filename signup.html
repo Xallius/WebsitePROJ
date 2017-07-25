@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+<title>JO n Jud8 Salon</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento|Berkshire+Swash|Courgette|Delius+Swash+Caps|IM+Fell+Great+Primer+SC|Overlock+SC|Bitter|Yrsa" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    
+</head>
+<body>
+  <!-- this is the navbar.. -->
+    <div id="navbar">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li> 
+            <li><a href="services.html">Services</a></li>  
+            <li><a href="/APPOINTMENT%20SYSTEM/reservation.html">Reservations</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li style="float:right;"><a id= acc1 href="signup.html">Sign Up</a></li>
+            <li style="float:right;"><a id= acc2 href="login.html">Log-in</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+ 
+    <!-- signup -->
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Personal Info</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu1" role="tab">Create Account </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu2" role="tab">Log-in</a>
+    </li>
+</ul>
+    <!-- content -->
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active" role="tabpanel">
+  <h2 id="account"> Create an Account</h2>
+      <name id=fname1>First Name:</name>
+      <input id= fname2 type="text" name="fname2">   
+    <br>
+      <name id=lname1>Last Name:</name> 
+      <input id= lname2 type="text" >  
+    <br>
+      <name id=add1>Address:</name> 
+    <input type="text"
+       cols="2" 
+       rows="2" 
+       style="width:270px; height:80px;" 
+       name="add2" 
+       id="add2" 
+       />
+    <br>
+<name id=bday1>Birthday:</name>
+<input id=bday2 type="date" name="bday2">
+    <br>
+<name id=gender>Gender:</name>  
+<input id=m type="radio" name="gender" value="male">
+    <name id= male >Male</name>
+  <input id= f type="radio" name="gender" value="female">
+    <name id=female>Female</name>     
+  </div>
+  <div id="menu1" class="tab-pane fade" role="tabpanel">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+  <div id="menu2" class="tab-pane fade" role="tabpanel">
+    <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p>
+  </div>
+</div>
+
+    
+    
+    
+    
+    
+</body>
+</html>
