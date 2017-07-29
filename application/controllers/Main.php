@@ -1,28 +1,24 @@
 <?php
 	/**
-	 * Main Controller Class
-	 *
-	 * @package     WebsitePROJ
-	 * @category    DOST-X_Project
-	 * @link        https://github.com/Xallius/WebsitePROJ
-	 * @copyright	2017
-	 **/
-
+	* Main Controller Class
+	*
+	* @package     WebsitePROJ
+	* @category    DOST-X_Project
+	* @link        https://github.com/Xallius/WebsitePROJ
+		* @copyright	2017
+	**/
 	class Main extends CI_Controller {
 		public function __construct(){
 			parent::__construct();
-            $this->load->database();
-            $this->load->model('user_models');
+			$this->load->model('user_models');
 		}
-
 		/**
-		 *	Index Method
-		 * 
-		 * @subpackage		index -- Login Screen
-		 * @param    		$page = view file name
-		 * 
-		 */
-
+			*	Index Method
+		*
+				* @subpackage		index -- Login Screen
+				* @param    		$page = view file name
+		*
+		*/
 		public function index($page = 'index'){
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/'.$page;
@@ -51,29 +47,24 @@
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/'.$page;
 			$this->load->view('master/layout',$data);
-            
-            
-            
-        }
-       
-        public function test($page = 'test'){
+		}
+
+		public function test($page = 'test'){
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/'.$page;
 			$this->load->view('master/layout',$data);
 		}
-        
-        public function signup2($page ='signup2'){
-            $data['title'] = "JO n Jud8 Salon";
-            $data['content'] = 'content/' .$page;
-            $this->load->view('master/layout',$data);
-        }
-        
-        public function login($page = 'login'){
-            $data['title'] = "JO n Jud8 Salon";
-            $data['content'] = 'content/' .$page;
-            $this->load->view('master/layout',$data);
-        }
-}
 
-		
+		public function signup2($page ='signup2'){
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout',$data);
+		}
+
+		public function login($page = 'login'){
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout',$data);
+		}
+	}		
 ?>

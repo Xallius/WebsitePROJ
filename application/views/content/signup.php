@@ -3,7 +3,7 @@
     <div class="row">
         <div id="signupcard" class="col s6 offset-s3">
             <div class="card-panel grey lighten-5">
-                <?php echo form_open('index.php/signup/test2'); ?>
+                <?php echo form_open('Signup/test2'); ?>
                 <div class="row">
                     <div class="input-field col s12">
                         <label class="active" for="fname">First Name</label>

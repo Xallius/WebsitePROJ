@@ -7,7 +7,7 @@ if (isset($message)) {
     <div class="row">
         <div id="signupcard2" class="col s6 offset-s3">
             <div class="card-panel grey lighten-5">
-                <?php echo form_open('index.php/signup/login'); ?>
+                <?php echo form_open('signup/login'); ?>
                     <div class="row">
                         <div class="input-field col s12">
                             <label class="active" for="username">Username</label>

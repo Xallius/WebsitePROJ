@@ -1,14 +1,16 @@
-<?php $message = $this->session->flashdata('message');
-if (isset($message)) {
-     echo '<div class="alert alert-info">' . $message . '</div>';
-} ?>
+<?php 
+$message = $this->session->flashdata('message'); //should be in the controller
+    if (isset($message)) {
+         echo '<div class="alert alert-info">' . $message . '</div>';
+    } 
+?>
 
 
 <div class="container">
     <div class="row">
         <div id="signupcard2" class="col s6 offset-s3">
             <div class="card-panel grey lighten-5">
-                <?php echo form_open('index.php/signup/signup2'); ?>
+                <?php echo form_open('signup/signup2'); ?>
                     <div class="row">
                         <div class="input-field col s12">
                             <label class="active" for="username">Username</label>
