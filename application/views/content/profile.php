@@ -1,5 +1,5 @@
-<ul id="slide-out" class="side-nav">
-<li><a href="#">Pending Reservation</a></li>
+<ul id="slide-out" class="side-nav button-collapse">
+	<li><a href="#">Pending Reservation</a></li>
 </ul>
 
 

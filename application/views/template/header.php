@@ -12,7 +12,7 @@
     <!-- this is the navbar.. -->
     <div id="navbar">
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
-            <div class="collapse navbar-collapse" id="navbar-collapse-">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="<?php echo base_url('Main'); ?>">Home</a></li>
                     <li><a href="<?php echo base_url('Main/about'); ?>">About Us</a></li>
