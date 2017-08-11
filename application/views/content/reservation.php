@@ -1,114 +1,153 @@
-<img id=box src="<?php echo base_url('assets/img/box.jpg'); ?>">
-<h2 id=reserve> Book an Appointment</h2>
-<name id= rservices>Service/s:</name>
-<select name=roptions id=roptions1>
-    <option name=one value=one> Women's Haircut </option>
-    <option name=two value=two> Men's Haircut </option>
-    <option name=three value=three> Blow Dry and Styling </option>
-    <option name=four value=four> Hair Color </option>
-    <option name=five value=five> Rebond </option>
-    <option name=six value=six> Relax</option>
-    <option name=seven value=seven> Brazillian </option>
-    <option name=eight value=eight> Hair and Make-up</option>
-    <option name=nine value=nine> Manicure</option>
-    <option name=ten value=ten> Pedicure</option>
-    <option name=eleven value=eleven> Nail Art</option>
-</select>
-<name id= rstaff>Staff/s:</name>
-<select name=rstaff1 id=rstaff1>
-    <option name=one value=one> Joel Valenzuela </option>
-    <option name=two value=two> JR Valenzuela</option>
-    <option name=three value=three> Colleen Jean Parotcha </option>
-    <option name=four value=four> Jerry Valenzuela </option>
-</select>
-<br>
-<br>
-<select name=roptions2 id=roptions2>
-    <option name=one value=one> Women's Haircut </option>
-    <option name=two value=two> Men's Haircut </option>
-    <option name=three value=three> Blow Dry and Styling </option>
-    <option name=four value=four> Hair Color </option>
-    <option name=five value=five> Rebond </option>
-    <option name=six value=six> Relax</option>
-    <option name=seven value=seven> Brazillian </option>
-    <option name=eight value=eight> Hair and Make-up</option>
-    <option name=nine value=nine> Manicure</option>
-    <option name=ten value=ten> Pedicure</option>
-    <option name=eleven value=eleven> Nail Art</option>
-</select>
-<select name=rstaff2 id=rstaff2>
-    <option name=one value=one> Joel Valenzuela </option>
-    <option name=two value=two> JR Valenzuela</option>
-    <option name=three value=three> Colleen Jean Parotcha </option>
-    <option name=four value=four> Jerry Valenzuela </option>
-</select>
-<br>
-<br>
-<select name=roptions3 id=roptions3>
-    <option name=one value=one> Women's Haircut </option>
-    <option name=two value=two> Men's Haircut </option>
-    <option name=three value=three> Blow Dry and Styling </option>
-    <option name=four value=four> Hair Color </option>
-    <option name=five value=five> Rebond </option>
-    <option name=six value=six> Relax</option>
-    <option name=seven value=seven> Brazillian </option>
-    <option name=eight value=eight> Hair and Make-up</option>
-    <option name=nine value=nine> Manicure</option>
-    <option name=ten value=ten> Pedicure</option>
-    <option name=eleven value=eleven> Nail Art</option>
-</select>
-<select name=rstaff3 id=rstaff3>
-    <option name=one value=one> Joel Valenzuela </option>
-    <option name=two value=two> JR Valenzuela</option>
-    <option name=three value=three> Colleen Jean Parotcha </option>
-    <option name=four value=four> Jerry Valenzuela </option>
-</select>
-<br>
-<br>
-<select name=roptions4 id=roptions4>
-    <option name=one value=one> Women's Haircut </option>
-    <option name=two value=two> Men's Haircut </option>
-    <option name=three value=three> Blow Dry and Styling </option>
-    <option name=four value=four> Hair Color </option>
-    <option name=five value=five> Rebond </option>
-    <option name=six value=six> Relax</option>
-    <option name=seven value=seven> Brazillian </option>
-    <option name=eight value=eight> Hair and Make-up</option>
-    <option name=nine value=nine> Manicure</option>
-    <option name=ten value=ten> Pedicure</option>
-    <option name=eleven value=eleven> Nail Art</option>
-</select>
-<select name=rstaff4 id=rstaff4>
-    <option name=one value=one> Joel Valenzuela </option>
-    <option name=two value=two> JR Valenzuela</option>
-    <option name=three value=three> Colleen Jean Parotcha </option>
-    <option name=four value=four> Jerry Valenzuela </option>
-</select>
-<br>
-<br>
-<select name=roptions5 id=roptions5>
-    <option name=one value=one> Women's Haircut </option>
-    <option name=two value=two> Men's Haircut </option>
-    <option name=three value=three> Blow Dry and Styling </option>
-    <option name=four value=four> Hair Color </option>
-    <option name=five value=five> Rebond </option>
-    <option name=six value=six> Relax</option>
-    <option name=seven value=seven> Brazillian </option>
-    <option name=eight value=eight> Hair and Make-up</option>
-    <option name=nine value=nine> Manicure</option>
-    <option name=ten value=ten> Pedicure</option>
-    <option name=eleven value=eleven> Nail Art</option>
-</select>
-<select name=rstaff5 id=rstaff5>
-    <option name=one value=one> Joel Valenzuela </option>
-    <option name=two value=two> JR Valenzuela</option>
-    <option name=three value=three> Colleen Jean Parotcha </option>
-    <option name=four value=four> Jerry Valenzuela </option>
-</select>
-<br>
-<name id=date>Requested Date:</name>
-<input id=date1 type="date" name="date">
-<br>
-<name id=time>Appointment Time:</name>
-<br>
-<input id= submit type="submit" value="Submit">
+
+
+
+<div id="container1">
+<div class="row">
+        <div id="signupcard" class="col s10 offset-s1">
+            <div class="card-panel grey lighten-5">
+                <div class="row">
+            <h2 class="col s7 offset-s3 pink-text" id=reserve> Book an Appointment</h2>
+                </div>
+            <div class="row">
+            <name class="col s1 pink-text" id="rservices">Service/s:</name>
+            <name class="col s3 offset-s5" id="staffs">Staff/s:</name>
+            </div>
+            <?php echo form_open('Formsub/check_reservation'); ?>
+                <div class="row">
+                <select class="col s5" name="rOptions1" required="required">
+                    <option value="">First Service</option>
+                    <option name=one value="Women's Haircut"> Women's Haircut </option>
+                    <option name=two value="Men's Haircut"> Men's Haircut </option>
+                    <option name=three value="Blow Dry and Styling"> Blow Dry and Styling </option>
+                    <option name=four value="Hair Color"> Hair Color </option>
+                    <option name=five value="Rebond"> Rebond </option>
+                    <option name=six value="Relax"> Relax</option>
+                    <option name=seven value="Brazillian"> Brazillian </option>
+                    <option name=eight value="Hair and Make-up"> Hair and Make-up</option>
+                    <option name=nine value="Manicure"> Manicure</option>
+                    <option name=ten value="Pedicure"> Pedicure</option>
+                    <option name=eleven value="Nail Art"> Nail Art</option>
+                </select>
+                <select class="col s5 offset-s1" name="rStaff1" required="required">
+                    <option value="Any Staff">Any Staff</option>
+                    <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
+                    <option name=two value="JR Valenzuela"> JR Valenzuela</option>
+                    <option name=three value="Colleen Jean Parotcha"> Colleen Jean Parotcha </option>
+                    <option name=four value="Jerry Valenzuela"> Jerry Valenzuela </option>
+                    <option value="Jocelyn Valenzuela"> Jocelyn Valenzuela </option>
+                </select>
+                </div>
+                <div class="row">
+                <select class="col s5" name="rOptions2">
+                    <option value="">Second Service</option>
+                    <option name=one value="Women's Haircut"> Women's Haircut </option>
+                    <option name=two value="Men's Haircut"> Men's Haircut </option>
+                    <option name=three value="Blow Dry and Styling"> Blow Dry and Styling </option>
+                    <option name=four value="Hair Color"> Hair Color </option>
+                    <option name=five value="Rebond"> Rebond </option>
+                    <option name=six value="Relax"> Relax</option>
+                    <option name=seven value="Brazillian"> Brazillian </option>
+                    <option name=eight value="Hair and Make-up"> Hair and Make-up</option>
+                    <option name=nine value="Manicure"> Manicure</option>
+                    <option name=ten value="Pedicure"> Pedicure</option>
+                    <option name=eleven value="Nail Art"> Nail Art</option>
+
+                </select>
+                <select class="col s5 offset-s1" name="rStaff2">
+                    <option value="Any Staff">Any Staff</option>
+                    <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
+                    <option name=two value="JR Valenzuela"> JR Valenzuela</option>
+                    <option name=three value="Colleen Jean Parotcha"> Colleen Jean Parotcha </option>
+                    <option name=four value="Jerry Valenzuela"> Jerry Valenzuela </option>
+                    <option value="Jocelyn Valenzuela"> Jocelyn Valenzuela </option>
+                </select>
+                </div>
+                <div class="row">
+                    <select class="col s5" name="rOptions3" >
+                        <option value="">Third Service</option>
+                        <option name=one value="Women's Haircut"> Women's Haircut </option>
+                        <option name=two value="Men's Haircut"> Men's Haircut </option>
+                        <option name=three value="Blow Dry and Styling"> Blow Dry and Styling </option>
+                        <option name=four value="Hair Color"> Hair Color </option>
+                        <option name=five value="Rebond"> Rebond </option>
+                        <option name=six value="Relax"> Relax</option>
+                        <option name=seven value="Brazillian"> Brazillian </option>
+                        <option name=eight value="Hair and Make-up"> Hair and Make-up</option>
+                        <option name=nine value="Manicure"> Manicure</option>
+                        <option name=ten value="Pedicure"> Pedicure</option>
+                        <option name=eleven value="Nail Art"> Nail Art</option>
+                    </select>
+                    <select class="col s5 offset-s1" name="rStaff3">
+                        <option value="Any Staff">Any Staff</option>
+                        <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
+                        <option name=two value="JR Valenzuela"> JR Valenzuela</option>
+                        <option name=three value="Colleen Jean Parotcha"> Colleen Jean Parotcha </option>
+                        <option name=four value="Jerry Valenzuela"> Jerry Valenzuela </option>
+                        <option value="Jocelyn Valenzuela"> Jocelyn Valenzuela </option>
+                    </select>
+                </div>
+                    <div class="row">
+                    <select class="col s5" name="rOptions4">
+                        <option value="">Fourth Service</option>
+                        <option name=one value="Women's Haircut"> Women's Haircut </option>
+                        <option name=two value="Men's Haircut"> Men's Haircut </option>
+                        <option name=three value="Blow Dry and Styling"> Blow Dry and Styling </option>
+                        <option name=four value="Hair Color"> Hair Color </option>
+                        <option name=five value="Rebond"> Rebond </option>
+                        <option name=six value="Relax"> Relax</option>
+                        <option name=seven value="Brazillian"> Brazillian </option>
+                        <option name=eight value="Hair and Make-up"> Hair and Make-up</option>
+                        <option name=nine value="Manicure"> Manicure</option>
+                        <option name=ten value="Pedicure"> Pedicure</option>
+                        <option name=eleven value="Nail Art"> Nail Art</option>
+                    </select>
+                    <select class="col s5 offset-s1" name="rStaff4">
+                        <option value="Any Staff">Any Staff</option>
+                        <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
+                        <option name=two value="JR Valenzuela"> JR Valenzuela</option>
+                        <option name=three value="Colleen Jean Parotcha"> Colleen Jean Parotcha </option>
+                        <option name=four value="Jerry Valenzuela"> Jerry Valenzuela </option>
+                        <option value="Jocelyn Valenzuela"> Jocelyn Valenzuela </option>
+                    </select>
+                </div>
+                <div class="row">
+                    <select class="col s5" name="rOptions5">
+                        <option value="">Fifth Service</option>
+                        <option name=one value="Women's Haircut"> Women's Haircut </option>
+                        <option name=two value="Men's Haircut"> Men's Haircut </option>
+                        <option name=three value="Blow Dry and Styling"> Blow Dry and Styling </option>
+                        <option name=four value="Hair Color"> Hair Color </option>
+                        <option name=five value="Rebond"> Rebond </option>
+                        <option name=six value="Relax"> Relax</option>
+                        <option name=seven value="Brazillian"> Brazillian </option>
+                        <option name=eight value="Hair and Make-up"> Hair and Make-up</option>
+                        <option name=nine value="Manicure"> Manicure</option>
+                        <option name=ten value="Pedicure"> Pedicure</option>
+                        <option name=eleven value="Nail Art"> Nail Art</option>
+                    </select>
+                    <select class="col s5 offset-s1" name="rStaff5">
+                        <option value="Any Staff">Any Staff</option>
+                        <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
+                        <option name=two value="JR Valenzuela"> JR Valenzuela</option>
+                        <option name=three value="Colleen Jean Parotcha"> Colleen Jean Parotcha </option>
+                        <option name=four value="Jerry Valenzuela"> Jerry Valenzuela </option>
+                        <option value="Jocelyn Valenzuela"> Jocelyn Valenzuela </option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="input-field col s5">
+                    <name id=date>Requested Date:</name>
+                      <input type="text" class="datepicker" name="date" required="required">
+                    </div>
+                    <div class="input-field col s5 offset-s1">
+                    <name id=time>Appointment Time:</name>
+                    <input name="appTime" type="text" class="timepicker" required="required">
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="col s3 offset-s4 btn pink waves-effect waves-light" type="submit" name="appSubmit">Submit</button>
+                </div>
+                <?php echo form_close(); ?>
+        </div>
+    </div>
+</div>

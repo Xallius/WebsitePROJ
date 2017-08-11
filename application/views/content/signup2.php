@@ -1,18 +1,16 @@
-<?php $message = $this->session->flashdata('message');
-if (isset($message)) {
-     echo '<div class="alert alert-info">' . $message . '</div>';
-} ?>
+<?php 
+$message = $this->session->flashdata('message'); //should be in the controller
+    if (isset($message)) {
+         echo '<div class="alert alert-info">' . $message . '</div>';
+    } 
+?>
 
-<?php if($this->session->userdata('login') && ($this->session->userdata('uid') == 1)){
-    redirect('Main/admin');
-} elseif ($this->session->userdata('login') && ($this->session->userdata('uid') == 0)) {
-    redirect('Main/index');
-    } ?>
+
 <div class="container">
     <div class="row">
-        <div id="signupcard2" class="col s6 offset-s3">
+        <div id="signupcard2" class="col s10 offset-s1">
             <div class="card-panel grey lighten-5">
-                <?php echo form_open('signup/login'); ?>
+                <?php echo form_open('signup/signup2'); ?>
                     <div class="row">
                         <div class="input-field col s12">
                             <label class="active" for="username">Username</label>
@@ -23,6 +21,12 @@ if (isset($message)) {
                         <div class="input-field col s12">
                             <label class="active" for="password">Password</label>
                             <?php echo form_input(array('class' => 'form-control', 'required' => 'required', 'name' => 'password', 'type' => 'password'), set_value('password')) ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label class="active" for="cpassword">Confirm Password</label>
+                            <?php echo form_input(array('class' => 'form-control', 'required' => 'required', 'name' => 'cpassword', 'type' => 'password'), set_value('cpassword')) ?>
                         </div>
                     </div>
                     <div class="row">

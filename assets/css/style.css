@@ -6,13 +6,13 @@ body{
 .navbar-default {
     background-color:  #ff79b0;
     margin: 0;
+    z-index: 5;
 }
-
 .nav.navbar-nav {
-    width: 100%;   
+    width: 100%;
 }
 .nav.navbar-nav > li {
-        display: inline-block;
+    display: inline-block;
     }
 .nav.navbar-nav > li > a {
     color: white;
@@ -27,7 +27,6 @@ body{
     padding: inherit;
 }
 .container {
-    width: 40%;
     margin-top: 5%;
    
 }
@@ -83,14 +82,13 @@ padding:1px;
 
 #button1{
     
-    margin-left: 78%;
+    margin-left: 76%;
     background: #c60055;
     
     
 }
 #button2{
- border: 3px solid #c60055;
-    font-size: 20px;
+ border: 1px solid #c60055;
     background-color: white;
     color: #c60055;;
     font-family: serif;
@@ -324,35 +322,10 @@ h1{
 }
 
 #b1{
-   border-style:ridge;
-    border-width: 5px;
-    border-color:#e91e63;
-    font-family: serif;
-    font-size: 20px;
-     color: #e91e63;
-    background-color:white;
-    text-align: center;
-   margin-left: 3%;
-    margin-right: 75%;
-    padding:1%;
-    width:20%;
-    height: 300px;
+   
 }
 #b2 {
-    border-style:ridge;
-    border-width: 5px;
-    border-color:#e91e63;
-    font-family: serif;
-    font-size: 20px;
-     color: #e91e63;
-    background-color:white;
-    text-align: center;
-    width: 20%;
-    height: 300px;
-   margin-left: 28%;
-    margin-right: 40%;
-    margin-top: -24%;
-    padding:2%;
+    
 }
 
 
@@ -368,42 +341,14 @@ h1{
  border: 2px solid #c60055;
     font-size: 15px;
     background-color: white;
-    color: #c60055;;
+    color: #c60055;
     font-family: serif;
      margin-top: 10%;
 }
 #b3 {
-    border-style:ridge;
-    border-width: 5px;
-    border-color:#e91e63;
-    font-family: serif;
-    font-size: 20px;
-     color: #e91e63;
-    background-color:white;
-    text-align: center;
-    width: 20%;
-    height: 300px;
-   margin-left: 52%;
-    margin-right: 40%;
-    margin-top: -24%;
-    padding:2%;
+   
 }
-#b4{
-   border-style:ridge;
-    border-width: 5px;
-    border-color:#e91e63;
-    font-family: serif;
-    font-size: 20px;
-     color: #e91e63;
-    background-color:white;
-    text-align: center;
-   margin-left: 77%;
-    margin-top: -24%;
-    margin-right: 75%;
-    padding:1%;
-    width:20%;
-    height: 300px;
-}
+
 
 #sidepic {
     height: 700px;
@@ -550,123 +495,10 @@ font-family: serif;
     margin-top: -4%;
 }
 /* ----------RESERVATION----------*/
-#box {
-    margin-left: 15%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-#reserve {
-     font-family: 'IM Fell Great Primer SC', serif;
-    font-size: 35px;
-    color: #e91e63;
-    margin-top: -48%;
-    text-align: center;
-}
-#rservices {
-    font-family:  serif;
-    font-size: 30px;
-    color: #e91e63;
-    margin-left:18%; 
-    margin-top: -30%;
-}
-#roptions1 {
-    margin-left: 1%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-#roptions2 {
-   margin-left: 28%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-#roptions3 {
-   margin-left: 28%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-#roptions4 {
-   margin-left: 28%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-#roptions5 {
-   margin-left: 28%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-
-#rstaff {
-    font-family:  serif;
-    font-size: 30px;
-    color: #e91e63;
-    margin-left:1%; 
-    margin-top: -30%;
-}
-#rstaff1 {
-   margin-left: 1%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-#rstaff2 {
-   margin-left: 8.5%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-#rstaff3 {
-   margin-left: 8.5%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-#rstaff4 {
-  margin-left: 8.5%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 1%;
-}
-#rstaff5 {
-  margin-left: 8.5%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 2%;
-}
-#date {
-     font-family:  serif;
-    font-size: 30px;
-    color: #e91e63;
-    margin-left:18%; 
-
-    
-}
-#date1 {
-    margin-left: 1%;
-    width: 20%;
-    height: 35px;
-    margin-bottom: 2%;
-}
-#time {
-     font-family:  serif;
-    font-size: 30px;
-    color: #e91e63;
-    margin-left:18%; 
-    margin-top: -27%;
-}
-#submit {
-    margin-left: 47%;
-    margin-top: 2%;
-    width: 10%;
-    background-color: #e91e63;
-    color: white;
-   font-size: 20px;
+#reserve{
     font-family: serif;
 }
+
 
 /* -----------SIGN UP--------------*/
 
@@ -810,12 +642,7 @@ font-family: serif;
     font-size: 25px;
     margin-bottom: 2%;
 }
-#pass {
-    margin-left: 10%;
-    font-size: 25px;
-    color: #e91e63;
-    font-family: serif;
-}
+
 #pass2 {
    margin-left: 2.5%;
     width: 50%;
@@ -835,4 +662,25 @@ font-family: serif;
     height: 30px;
     font-size: 25px;
     margin-bottom: 2%;
+}
+
+#signupcard
+{
+    margin-top: 3%;
+}
+
+#signupcard2
+{
+    margin-top: 3%;
+}
+.caret {
+  border-color: transparent !important;
+}
+
+.side-nav{
+    z-index: 999;
+}
+
+#buttonmenu{
+    margin-left: 43%;
 }

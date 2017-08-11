@@ -1,76 +1,56 @@
+
 <div class="container">
-    <!-- signup tabs -->
-    <ul id="tabtab" class="nav nav-tabs" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Personal Info</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu1" role="tab">Create Account </a>
-        </li>
-    </ul>
-    <!-- content -->
-    <div class="tab-content">
-        <div id="home" class="tab-pane fade in active" role="tabpanel">
-            <div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel">Thank you for pre-registering!</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Thanks for getting in touch!</p>
-                        </div>
+    <div class="row">
+        <div id="signupcard" class="col s12">
+            <div class="card-panel grey lighten-5">
+                <?php echo form_open('Signup/test2'); ?>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label class="active" for="fname">First Name</label>
+                        <?php echo form_input(array("class" => "form-control", "required" => "required", "name" => "fname", "type" => "text"), set_value('fname')) ?>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label class="active" for="lname">Last Name</label>
+                        <?php echo form_input(array("class" => "form-control", "required" => "required", "name" => "lname", "type" => "text"), set_value('lname')) ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label class="active" for="contact">Contact #</label>
+                        <?php echo form_input(array("class" => "form-control", "required" => "required", "name" => "contact", "type" => "text"), set_value('contact')) ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label class="active" for="bday">Birthday (mm/dd/yyyy)</label>
+                        <?php echo form_input(array("class" => "form-control", "required" => "required", "name" => "bday", "type" => "text"), set_value('bday')) ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label class="active" for="address">Address</label>
+                        <textarea id="address" class="materialize-textarea" name='address'></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select name="gender">
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                        <label>Gender</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3 offset-s4">
+                    <button class="btn pink waves-effect waves-light" type="submit">Next</button>
+                    </div>
+                </div>
+                 <?php echo form_close(); ?>
+                
             </div>
-            
-            <form id="reg1" method="post" onclick="return isEmpty();" action="#menu1">
-                <br><br>
-                <name id=fname1>First Name:</name>
-                <input id= fname2 type="text" name="fname2">
-                <br>
-                <name id=lname1>Last Name:</name>
-                <input id= lname2 type="text" >
-                <br>
-                <name id=add1>Address:</name>
-                <input type="text"
-                cols="2"
-                rows="2"
-                style="width:270px; height:80px;"
-                name="add2"
-                id="add2"
-                />
-                <br>
-                <name id=bday1>Birthday:</name>
-                <input id=bday2 type="date" name="bday2">
-                <br>
-                <name id=gender>Gender:</name>
-                <input id=m type="radio" name="gender" value="male">
-                <name id= male >Male</name>
-                <input id=f type="radio" name="gender" value="female">
-                <name id=female>Female</name>
-                <br>
-                <input id="btnNext" type="submit" value="Next">
-            </form>
-        </div>
-        
-        <div id="menu1" class="tab-pane fade" role="tabpanel">
-            <form method="post" action="#menu2">
-                <br><br>
-                <name id="uName">Username: </name>
-                <input id="uName2" type="text" name="uName2">
-                <br>
-                <name id="pass">Password:</name>
-                <input id="pass2" type="password" name="pass2">
-                <br>
-                <name id="pass3">Confirm Password:</name>
-                <input id="pass4" type="password" name="pass4">
-                <br>
-                <input id="btnBack" type="back" value="Back">
-                <input id="btnSubmit" type="submit" value="Submit">
-            </form>
         </div>
     </div>
-</div>
 </div>
