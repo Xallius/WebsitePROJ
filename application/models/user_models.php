@@ -155,7 +155,12 @@ class User_models extends CI_Model
         redirect('Main/admin');
     }
 
-    //test....
+    //get all available services
+    function getAvailableServices(){
+        $this->db->select("sService, sPrice");
+        $query = $this->db->get('site_services');
+        return $query->result();
+    }
     
 }
 ?>

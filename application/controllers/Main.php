@@ -42,6 +42,8 @@
 
 		//list of services
 		public function services($page = 'services'){
+			$query = $this->user_models->getAvailableServices();
+			$data['servicesRow'] = $query;
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/'.$page;
 			$this->load->view('master/layout',$data);
