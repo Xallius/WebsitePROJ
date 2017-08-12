@@ -84,11 +84,11 @@ CREATE TABLE `site_services` (
   `sPrice` int(10) NOT NULL,
   `sCategory` char(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 /*Data for the table `site_services` */
 
-insert  into `site_services`(`id`,`sService`,`sPrice`,`sCategory`) values (1,'Women\'s Haircut',70,'Basic Hair Services'),(2,'Blow Dry and Styling',60,'Basic Hair Services'),(3,'Men\'s Haircut',70,'Basic Hair Services'),(4,'Hair Color',300,'Special Services'),(5,'Rebond',800,'Special Services'),(6,'Relax',500,'Special Services'),(7,'Brazilian',1000,'Special Services'),(8,'Hair and Make-up',700,'Special Services'),(9,'Manicure',50,'Nails Services'),(10,'Pedicure',50,'Nails Services'),(11,'Nail Art',30,'');
+insert  into `site_services`(`id`,`sService`,`sPrice`,`sCategory`) values (1,'Women\'s Haircut',70,'Basic Hair Services'),(2,'Blow Dry and Styling',60,'Basic Hair Services'),(3,'Men\'s Haircut',70,'Basic Hair Services'),(4,'Hair Color',300,'Special Services'),(5,'Rebond',800,'Special Services'),(6,'Relax',500,'Special Services'),(7,'Brazilian',1000,'Special Services'),(8,'Hair and Make-up',700,'Special Services'),(9,'Manicure',50,'Nails Services'),(10,'Pedicure',50,'Nails Services'),(11,'Nail Art',30,'Nails Services'),(12,'Baby Haircut',70,'Basic Hair Services'),(13,'Old People Haircut',100000,'Special Services');
 
 /*Table structure for table `staff` */
 

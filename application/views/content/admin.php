@@ -6,7 +6,7 @@
 		<li><a href="#"></a></li>
 		<li><a href="<?php echo base_url("Main/admin") ?>">Pending Reservation</a></li>
 		<li><a href="<?php echo base_url("Main/admin2") ?>">Cancelled Reservation</a></li>
-
+		<li><a href="<?php echo base_url("Main/adminEditServices") ?>">Edit Services</a></li>
 	</ul>
 	</div>
 	<div class="col s12">

@@ -95,7 +95,6 @@
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/' .$page;
 			$this->load->view('master/layout',$data);
-
 		}
 
 		//customers cancelled reservation
@@ -129,6 +128,14 @@
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/' .$page;
 			$this->load->view('master/layout',$data);			
+		}
+
+		public function adminEditServices($page ='adminEditServices'){
+			$query = $this->user_models->getAvailableServices();
+			$data['servicesData'] = $query;
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout', $data);
 		}
 	}		
 ?>
