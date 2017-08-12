@@ -27,8 +27,12 @@
 				<td><?php echo $item->rStaff; ?></td>
 				<td><?php echo $item->date; ?></td>
 				<td><?php echo $item->time; ?></td>
-				<td><?php if($item->rStatus == 0){echo "Pending";} elseif($item->rstatus==1){echo "Booked";} ?></td>
-				<td><a class=" btn pink waves-effect waves-light" href="<?php echo base_url("Formsub/delete_row/$item->id")?>">Cancel</a></td>
+				<td><?php if($item->rStatus == 0){echo "Pending";} elseif($item->rStatus==1){echo "Booked";} ?></td>
+				<?php if($item->rStatus == 0): ?>
+					<td><a class=" btn pink waves-effect waves-light" href="<?php echo base_url("Formsub/delete_row/$item->id")?>">Cancel</a></td>
+				<?php elseif($item->rStatus == 1): ?>
+					<td><a class=" btn pink waves-effect waves-light disabled" href="<?php echo base_url("Formsub/delete_row/$item->id")?>">Cancel</a></td>
+				<?php endif; ?>
 			</tr>
 		<?php endforeach; ?>
 		</tbody>

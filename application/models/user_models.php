@@ -156,9 +156,6 @@ class User_models extends CI_Model
     }
 
     //test....
-    function getStaffAvailability()
-    {
-        $this->db->select("*")
-    }
+    
 }
 ?>

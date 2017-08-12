@@ -1,0 +1,4 @@
+cannot put reservation within same time (ex, current time: 11:00am, cannot apply for 11:00am, atleast +1hr)
+cannot duplicate staffs for reservation
+must enable content edit for appointmentsystem/services as admin
+idea for must enable: adding table and make panel to admin to remove/add services
