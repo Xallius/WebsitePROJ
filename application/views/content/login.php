@@ -10,7 +10,7 @@ if (isset($message)) {
     } ?>
 <div class="container">
     <div class="row">
-        <div id="signupcard2" class="col s10 offset-s1">
+        <div id="signupcard2" class="col s6 offset-s3">
             <div class="card-panel grey lighten-5">
                 <?php echo form_open('signup/login'); ?>
                     <div class="row">

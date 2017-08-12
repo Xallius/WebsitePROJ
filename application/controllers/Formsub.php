@@ -63,12 +63,14 @@ class Formsub extends CI_Controller{
 	            	$this->User_models->insert_reservation($data);
 		            }    
     		}
-    		
-			
-    	
-    		
     		$this->session->set_flashdata('rSuccess', 'You have successfully booked an appointment!');
     		redirect("Main/profile");
-    		
+    }
+    public function delete_row($id){
+    		$this->User_models->deleteRow($id);
+    }
+
+    public function accept_row($id){
+    		$this->User_models->acceptRow($id);
     }
 }

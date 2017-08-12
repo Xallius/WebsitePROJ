@@ -23,7 +23,7 @@ class Signup extends CI_Controller{
             
             if ($this->form_validation->run() == FALSE)
             {
-                $this->load->view('content/signup');
+                redirect("Main/signup");
             }
             else
             {

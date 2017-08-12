@@ -31,7 +31,7 @@
     bring out the best feautures in every client to boost their confidence.
     <a id="button3" href="<?php echo base_url('Main/about'); ?>"><button id="button4" type="button" class="btn btn-primary btn-lg pull-center">Learn More </button></a>
 </p>
-<p id="b2" class="col s2 offset-s1">
+<p id="b2" class="col s2">
     <img src="<?php echo base_url('assets/img/email.png'); ?>"><br>
     <b>Contact</b><br>
     JOnJud8@gmail.com<br>
@@ -41,17 +41,19 @@
     18 Don Placido Campos
     St. Brgy Zone 1
 </p>
-<p id="b3" class="col s3 offset-s1">
+<p id="b3" class="col s2">
     <img src="<?php echo base_url('assets/img/clock.png'); ?>"><br>
     <b>Store Hours</b><br>
     Mon &amp; Tue: 9:00am to 7:00pm<br>
     Wed &amp; Thu: 10:00am to 8:00pm<br>
     Fri &amp; Sat: 9:00am to 9:00pm<br>
 </p>
-<p id="b4" class="col s2 offset-s1">
+<div class="col s2 card-panel red lighten-4"
+<p id="b4">
     <img src="<?php echo base_url('assets/img/award.png'); ?>"><br>
     <b>#1 Salon</b><br>
     We were the champion in the HMAU competition of Hair Asia and won multiple awards.
     <a id="button5" href="<?php echo base_url('Main/about'); ?>"><button id="button6" type="button" class="btn btn-primary btn-lg pull-center">Learn More </button></a>
 </p>
+</div>
 </div>

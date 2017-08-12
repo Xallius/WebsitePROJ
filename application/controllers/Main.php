@@ -35,6 +35,8 @@
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/'.$page;
 			$this->load->view('master/layout',$data);
+			//$query = $this->user_models->getStaffAvailability();
+			//$data['staffData'] = $query;
 		}
 
 		public function services($page = 'services'){
@@ -75,11 +77,39 @@
 		}
 
 		public function profile($page = 'profile'){
+			$this->user_models->clearEmptyData();
+			$query = $this->user_models->getPendingReservation();
+			$data['resRow'] = $query;
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/' .$page;
 			$this->load->view('master/layout',$data);
+
 		}
 
-		
+		public function profile2($page ='profile2'){
+			$this->user_models->clearEmptyData2();
+			$query = $this->user_models->getCancelledReservation();
+			$data['resRow'] = $query;
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout',$data);			
+		}
+
+		public function admin($page = 'admin'){
+			$this->user_models->clearEmptyData();
+			$query = $this->user_models->getPendingReservationAdmin();
+			$data['resRow'] = $query;
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout', $data);
+		}
+		public function admin2($page ='admin2'){
+			$this->user_models->clearEmptyData2();
+			$query = $this->user_models->getCancelledReservationAdmin();
+			$data['resRow'] = $query;
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout',$data);			
+		}
 	}		
 ?>
