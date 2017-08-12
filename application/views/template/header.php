@@ -18,15 +18,18 @@
                     <li><a href="<?php echo base_url('Main/services'); ?>">Services</a></li>
                     <li><a href="<?php if (!$this->session->userdata('login')){echo '#';} else{ echo base_url('Main/reservation');} ?>">Reservations</a></li>
                     <li><a href="<?php echo base_url('Main/gallery'); ?>">Gallery</a></li>
+                    <!-- redirects to customer profile -->
                     <?php if ($this->session->userdata('login')){ ?>
                         <?php if ($this->session->userdata('uid') == 0){ ?>
                             <li style="float:right;"><a href="<?php echo base_url('Main/profile'); ?>">Hello <?php echo $this->session->userdata('uname'); ?></a></li>
                             <li style="float:right;"><a href="<?php echo base_url('Main/logout'); ?>">Logout</a></li>
+                    <!-- redirects to admin -->
                         <?php } elseif ($this->session->userdata('uid') == 1) { ?>
                             <li style="float:right;"><a href="<?php echo base_url('Main/admin'); ?>">Hello <?php echo $this->session->userdata('uname'); ?></a></li>
                             <li style="float:right;"><a href="<?php echo base_url('Main/logout'); ?>">Logout</a></li>
                         <?php } ?>
                     <?php } else { ?>
+                    <!-- if no one is logged in, display signup and login button -->
                     <li style="float:right;"><a id= acc1 href="<?php echo base_url('Main/signup'); ?>">Sign Up</a></li>
                     <li style="float:right;"><a id= acc2 href="<?php echo base_url('Main/login'); ?>">Log-in</a></li>
                     <?php }?>

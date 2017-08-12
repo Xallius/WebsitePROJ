@@ -9,7 +9,7 @@ class User_models extends CI_Model
     }
 	
 	
-	// insert
+	// inserts new user data from signup
 	function insert_user($data)
     {
         $data=array(
@@ -42,7 +42,7 @@ class User_models extends CI_Model
         $this->db->update('account', $data);
     }
     
-
+    //checks user validity
     function get_user($username, $password){
         $this->db->where('username', $username);
         $this->db->where('password', $password);
@@ -50,10 +50,13 @@ class User_models extends CI_Model
         return $query->result();
     }
 
+    //inserts reservation data to database
     function insert_reservation($data)
     {
         $this->db->insert_batch('reservation', $data);
     }
+
+    //grabs pending reservation 
     function getPendingReservation()
     {
         $this->db->select("rService, rStaff, date, time, id, rStatus")
@@ -62,17 +65,21 @@ class User_models extends CI_Model
         return $query->result();
     }
 
+    //clears whitespace from insert_reservation
     function clearEmptyData()
     {
         $this->db->where('rService', '');
         $this->db->delete('reservation');
     }
 
+    //just to be sure...
     function clearEmptyData2()
     {
         $this->db->where('rService', '');
         $this->db->delete('creservation');
     }
+
+    //grabs cancelled reservations
     function getCancelledReservation()
     {
         $this->db->select("rService, rStaff, date, time, id")
@@ -81,12 +88,15 @@ class User_models extends CI_Model
         return $query->result();
     }
 
+    //used to display to table
     function getSpecificRow(){
         $this->db->select("id")
                 ->where("username", $this->session->userdata('username'));
         $query = $this->db->get('reservation');
         return $query->result();
     }
+
+    //purges selected reservation row to 'reservation' and inserts into 'creservation (cancelled reservations)'
     function deleteRow($id){
         
         $rService = $this->db->select('rService')
@@ -121,6 +131,7 @@ class User_models extends CI_Model
         redirect('Main/profile');
     }
 
+    //pending reservations for admin
     function getPendingReservationAdmin()
     {
         $this->db->select("rService, rStaff, date, time, id, rStatus, username");
@@ -128,17 +139,26 @@ class User_models extends CI_Model
         return $query->result();
     }
 
+    //cancelled reservations for admin
     function getCancelledReservationAdmin()
     {
         $this->db->select("rService, rStaff, date, time, id, rStatus, username");
         $query = $this->db->get('creservation');
         return $query->result();
     }
+
+    //makes 'pending' status to 'booked'
     function acceptRow($id){
         $data = array(
                 'rStatus' => 1);
         $this->db->set($data)->where('id', $id)->update('reservation', $data);
         redirect('Main/admin');
+    }
+
+    //test....
+    function getStaffAvailability()
+    {
+        $this->db->select("*")
     }
 }
 ?>
