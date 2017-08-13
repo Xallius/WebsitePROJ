@@ -155,9 +155,9 @@ class User_models extends CI_Model
         redirect('Main/admin');
     }
     //edit service items
-    function editService($data){
-        $id = $this->input->post('servID');
-        $this->db->set($data)->where('id', $id)->update('site_services', $data);
+    function editService($data, $id){
+        where('id', $id);
+        update('site_services', $data);
     }
     //get all available services
     function getAvailableServices(){

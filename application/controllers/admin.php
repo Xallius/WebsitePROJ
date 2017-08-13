@@ -25,7 +25,7 @@ class Admin extends CI_Controller{
             'sCategory' => $this->input->post('serviceCategory'),
             'sPrice' => $this->input->post('servPrice')
             );
-        $this->User_models->editService($data);
+        $this->User_models->editService($data, $this->input->post('servID'));
     }
  }
 ?> 
