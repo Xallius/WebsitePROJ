@@ -67,12 +67,13 @@ CREATE TABLE `reservation` (
   `date` char(50) DEFAULT NULL,
   `time` char(50) DEFAULT NULL,
   `rStatus` int(11) DEFAULT '0',
+  `datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
 
 /*Data for the table `reservation` */
 
-insert  into `reservation`(`id`,`rService`,`rStaff`,`username`,`date`,`time`,`rStatus`) values (23,'Women\'s Haircut','JR Valenzuela','test2','14 August, 2017','01:55AM',1);
+insert  into `reservation`(`id`,`rService`,`rStaff`,`username`,`date`,`time`,`rStatus`,`datetime`) values (59,'Women\'s Haircut','Joel Valenzuela','test2','2017-08-29','05:20',0,'2017-08-29 05:20:00');
 
 /*Table structure for table `site_services` */
 
@@ -80,15 +81,14 @@ DROP TABLE IF EXISTS `site_services`;
 
 CREATE TABLE `site_services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `sService` char(50) NOT NULL,
-  `sPrice` int(10) NOT NULL,
-  `sCategory` char(50) NOT NULL,
+  `sService` char(50) DEFAULT NULL,
+  `sPrice` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 /*Data for the table `site_services` */
 
-insert  into `site_services`(`id`,`sService`,`sPrice`,`sCategory`) values (1,'Women\'s Haircut',70,'Basic Hair Services'),(2,'Blow Dry and Styling',60,'Basic Hair Services'),(3,'Men\'s Haircut',70,'Basic Hair Services'),(4,'Hair Color',300,'Special Services'),(5,'Rebond',800,'Special Services'),(6,'Relax',500,'Special Services'),(7,'Brazilian',1000,'Special Services'),(8,'Hair and Make-up',700,'Special Services'),(9,'Manicure',50,'Nails Services'),(10,'Pedicure',50,'Nails Services'),(11,'Nail Art',30,'Nails Services'),(12,'Baby Haircut',70,'Basic Hair Services'),(13,'Old People Haircut',100000,'Special Services');
+insert  into `site_services`(`id`,`sService`,`sPrice`) values (1,'Women\'s Haircut',70),(2,'Blow Dry and Styling',60),(3,'Men\'s Haircut',70),(4,'Hair Color',300),(5,'Rebond',800),(6,'Relax',500),(7,'Brazilian',1000),(8,'Hair and Make-up',700),(9,'Manicure',50),(10,'Pedicure',50),(11,'Nail Art',30);
 
 /*Table structure for table `staff` */
 

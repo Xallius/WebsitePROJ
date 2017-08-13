@@ -137,11 +137,11 @@
                 <div class="row">
                     <div class="input-field col s5">
                     <name id=date>Requested Date:</name>
-                      <input type="text" class="datepicker" name="date" required="required">
+                      <input type="date" class="datepicker" name="date" required="required">
                     </div>
                     <div class="input-field col s5 offset-s1">
                     <name id=time>Appointment Time:</name>
-                    <input name="appTime" type="text" class="timepicker" required="required">
+                    <input name="appTime" type="time" class="timepicker" required="required">
                     </div>
                 </div>
                 <div class="row">
