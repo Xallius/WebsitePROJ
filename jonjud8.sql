@@ -83,12 +83,13 @@ CREATE TABLE `site_services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sService` char(50) DEFAULT NULL,
   `sPrice` int(10) DEFAULT NULL,
+  `sCategory` char(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 /*Data for the table `site_services` */
 
-insert  into `site_services`(`id`,`sService`,`sPrice`) values (1,'Women\'s Haircut',70),(2,'Blow Dry and Styling',60),(3,'Men\'s Haircut',70),(4,'Hair Color',300),(5,'Rebond',800),(6,'Relax',500),(7,'Brazilian',1000),(8,'Hair and Make-up',700),(9,'Manicure',50),(10,'Pedicure',50),(11,'Nail Art',30);
+insert  into `site_services`(`id`,`sService`,`sPrice`,`sCategory`) values (1,'Women\'s Haircut',70,'Basic Hair Services'),(2,'Blow Dry and Styling',60,'Basic Hair Services'),(3,'Men\'s Haircut',70,'Basic Hair Services'),(4,'Hair Color',300,'Special Services'),(5,'Rebond',800,'Special Services'),(6,'Relax',500,'Special Services'),(7,'Brazilian',1000,'Special Services'),(8,'Hair and Make-up',700,'Special Services'),(9,'Manicure',50,'Nails Services'),(10,'Pedicure',50,'Nails Services'),(11,'Nail Art',30,'Nails Services');
 
 /*Table structure for table `staff` */
 
