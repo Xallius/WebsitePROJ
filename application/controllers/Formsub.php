@@ -20,7 +20,10 @@ class Formsub extends CI_Controller{
 	            }
             else
 	            {
-	            //inserts options 1~5 within database
+	            
+	            if ($this->input->post('rOptions1') === $this->input->post('rOptions2')){
+	            	exit;
+	            }
 	    		if ($this->input->post()){
 	    		
 	    		$data=array(
