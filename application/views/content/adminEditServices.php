@@ -18,7 +18,7 @@
                 <div class="modal-content">
                 <h5>Add a Service</h5>
                   <p>Please input: Service Name, Price and Category!</p>
-                    <?php echo form_open('admin/edit_service'); ?>
+                    <?php echo form_open('admin/edit_service', array('method' => 'post')); ?>
                     <label for="servName">Service Name</label>
                     <div class="row">
                       <div class="col s7">
