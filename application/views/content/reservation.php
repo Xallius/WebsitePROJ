@@ -1,9 +1,18 @@
+
+
+<?php $message = $this->session->flashdata('trymsg');
+if (isset($message)): ?>
+    <div class="row">
+     <div class="card-panel col s10 offset-s1"><?php echo $message; ?></div>
+    </div>
+<?php endif; ?>
+
 <div id="container1">
 <div class="row">
         <div id="signupcard" class="col s10 offset-s1">
             <div class="card-panel grey lighten-5">
                 <div class="row">
-            <h2 class="col s7 offset-s3 pink-text" id=reserve> Book an Appointment</h2>
+                    <h2 class="col s7 offset-s3 pink-text" id=reserve> Book an Appointment</h2>
                 </div>
             <div class="row">
             <name class="col s1 pink-text" id="rservices">Service/s:</name>
@@ -35,7 +44,7 @@
                 </select>
                 </div>
                 <div class="row">
-                <select class="col s5" name="rOptions2" id="rOptions2" required>
+                <select class="col s5" name="rOptions2" id="rOptions2" >
                     <option value="">Second Service</option>
                     <option name=one value="Women's Haircut"> Women's Haircut </option>
                     <option name=two value="Men's Haircut"> Men's Haircut </option>
@@ -50,7 +59,7 @@
                     <option name=eleven value="Nail Art"> Nail Art</option>
 
                 </select>
-                <select class="col s5 offset-s1" name="rStaff2" id="rStaff2" required="required">
+                <select class="col s5 offset-s1" name="rStaff2" id="rStaff2">
                     <option value="Any Staff">Any Staff</option>
                     <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
                     <option name=two value="JR Valenzuela"> JR Valenzuela</option>
@@ -60,7 +69,7 @@
                 </select>
                 </div>
                 <div class="row">
-                    <select class="col s5" name="rOptions3" id="rOptions3" required="required">
+                    <select class="col s5" name="rOptions3" id="rOptions3" >
                         <option value="">Third Service</option>
                         <option name=one value="Women's Haircut"> Women's Haircut </option>
                         <option name=two value="Men's Haircut"> Men's Haircut </option>
@@ -74,7 +83,7 @@
                         <option name=ten value="Pedicure"> Pedicure</option>
                         <option name=eleven value="Nail Art"> Nail Art</option>
                     </select>
-                    <select class="col s5 offset-s1" name="rStaff3" id="rStaff3" required="required">
+                    <select class="col s5 offset-s1" name="rStaff3" id="rStaff3" >
                         <option value="Any Staff">Any Staff</option>
                         <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
                         <option name=two value="JR Valenzuela"> JR Valenzuela</option>
@@ -84,7 +93,7 @@
                     </select>
                 </div>
                     <div class="row">
-                    <select class="col s5" name="rOptions4" id="rOptions4" required="required">
+                    <select class="col s5" name="rOptions4" id="rOptions4" >
                         <option value="">Fourth Service</option>
                         <option name=one value="Women's Haircut"> Women's Haircut </option>
                         <option name=two value="Men's Haircut"> Men's Haircut </option>
@@ -98,7 +107,7 @@
                         <option name=ten value="Pedicure"> Pedicure</option>
                         <option name=eleven value="Nail Art"> Nail Art</option>
                     </select>
-                    <select class="col s5 offset-s1" name="rStaff4" id="rStaff4" required="required">
+                    <select class="col s5 offset-s1" name="rStaff4" id="rStaff4" >
                         <option value="Any Staff">Any Staff</option>
                         <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
                         <option name=two value="JR Valenzuela"> JR Valenzuela</option>
@@ -108,7 +117,7 @@
                     </select>
                 </div>
                 <div class="row">
-                    <select class="col s5" name="rOptions5" id="rOptions5" required="required">
+                    <select class="col s5" name="rOptions5" id="rOptions5">
                         <option value="">Fifth Service</option>
                         <option name=one value="Women's Haircut"> Women's Haircut </option>
                         <option name=two value="Men's Haircut"> Men's Haircut </option>
@@ -122,7 +131,7 @@
                         <option name=ten value="Pedicure"> Pedicure</option>
                         <option name=eleven value="Nail Art"> Nail Art</option>
                     </select>
-                    <select class="col s5 offset-s1" name="rStaff5" id="rStaff5" required="required">
+                    <select class="col s5 offset-s1" name="rStaff5" id="rStaff5">
                         <option value="Any Staff">Any Staff</option>
                         <option name=one value="Joel Valenzuela"> Joel Valenzuela </option>
                         <option name=two value="JR Valenzuela"> JR Valenzuela</option>

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/font-styles.css'); ?>" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="<?php echo base_url("assets/css/materialize.css"); ?>" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/sweetalert2.css') ?>" type="text/css" media="screen, projection" />
 </head>
 <body>
     <!-- this is the navbar.. -->

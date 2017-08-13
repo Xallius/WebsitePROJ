@@ -154,10 +154,14 @@ class User_models extends CI_Model
         $this->db->set($data)->where('id', $id)->update('reservation', $data);
         redirect('Main/admin');
     }
-
+    //edit service items
+    function editService($data){
+        $id = $this->input->post('servID');
+        $this->db->set($data)->where('id', $id)->update('site_services', $data);
+    }
     //get all available services
     function getAvailableServices(){
-        $this->db->select("sService, sPrice, sCategory");
+        $this->db->select("sService, sPrice, sCategory, id");
         $query = $this->db->get('site_services');
         return $query->result();
     }

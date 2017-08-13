@@ -20,10 +20,12 @@ class Formsub extends CI_Controller{
 	            }
             else
 	            {
-	            
-	            if ($this->input->post('rOptions1') === $this->input->post('rOptions2')){
+	            //checks if one of the options gets duplicated staff
+	            /*if ($this->input->post('rStaff1') === $this->input->post('rStaff2') || $this->input->post('rStaff1') === $this->input->post('rStaff3') || $this->input->post('rStaff1') === $this->input->post('rStaff4') || $this->input->post('rStaff1') === $this->input->post('rStaff5')){
+	            	$this->session->set_flashdata('trymsg', 'test');
+	            	redirect('Main/reservation');
 	            	exit;
-	            }
+	            }*/
 	    		if ($this->input->post()){
 	    		
 	    		$data=array(
@@ -41,7 +43,7 @@ class Formsub extends CI_Controller{
 	            		'date' => $this->input->post('date'),
 	            		'time' => $this->input->post('appTime'),
 	            		'username' => $this->session->userdata('username'),
-	            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date')))
+	            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
 	            		),
 	            	array(
 	            		'rService' => $this->input->post('rOptions3'),
@@ -49,7 +51,7 @@ class Formsub extends CI_Controller{
 	            		'date' => $this->input->post('date'),
 	            		'time' => $this->input->post('appTime'),
 	            		'username' => $this->session->userdata('username'),
-	            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date')))
+	            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
 	            		),
 	            	array(
 	            		'rService' => $this->input->post('rOptions4'),
@@ -57,7 +59,7 @@ class Formsub extends CI_Controller{
 	            		'date' => $this->input->post('date'),
 	            		'time' => $this->input->post('appTime'),
 	            		'username' => $this->session->userdata('username'),
-	            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date')))
+	            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
 	            		),
 	            	array(
 	            		'rService' => $this->input->post('rOptions5'),
@@ -65,7 +67,7 @@ class Formsub extends CI_Controller{
 	            		'date' => $this->input->post('date'),
 	            		'time' => $this->input->post('appTime'),
 	            		'username' => $this->session->userdata('username'),
-	            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date')))
+	            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
 	            		)
 	            );
 	    			//pass to model User_models
