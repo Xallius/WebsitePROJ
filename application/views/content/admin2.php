@@ -1,3 +1,7 @@
+<?php if ($this->session->userdata('uid') === '0'){
+  redirect('Main/index');
+} ?>
+
 <div class="container">
 	<div class="row">
 

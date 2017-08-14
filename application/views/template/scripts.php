@@ -101,5 +101,12 @@
     $('select').material_select();
   });  
 </script>
-
+<script>
+$(document).ready(function() {
+    $('#serviceCategory').material_select();
+    $('select').on('change', function() {
+      $('#servCategory').val($('#serviceCategory').val());
+    })
+});
+</script>
 </html>

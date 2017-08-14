@@ -1,7 +1,9 @@
 <?php $message = $this->session->flashdata('message');
-if (isset($message)) {
-     echo '<div class="alert alert-info">' . $message . '</div>';
-} ?>
+if (isset($message)): ?>
+<div class="row">
+     <div class="card-panel col s10 offset-s1"><?php echo $message; ?></div>
+</div>
+<?php endif; ?>
 
 <?php if($this->session->userdata('login') && ($this->session->userdata('uid') == 1)){
     redirect('Main/admin');

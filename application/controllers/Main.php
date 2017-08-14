@@ -110,6 +110,8 @@
 		public function admin($page = 'admin'){
 			//clears generated whitespace by reservation
 			$this->user_models->clearEmptyData();
+			//clears null data
+			$this->user_models->clearNullData();
 			//grabs pending reservations
 			$query = $this->user_models->getPendingReservationAdmin();
 			$data['resRow'] = $query;
