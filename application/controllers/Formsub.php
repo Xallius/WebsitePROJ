@@ -20,9 +20,17 @@ class Formsub extends CI_Controller{
 	            }
             else
 	            {
+<<<<<<< HEAD
 	    		if ($this->input->post()){
 			    	$userDate = strtotime($this->input->post('appTime'));
 			        if ($userDate > strtotime('09:00') && $userDate < strtotime('17:00')){
+=======
+	            
+	    		if ($this->input->post()){
+	    		
+			    		$userDate = strtotime($this->input->post('appTime'));
+			            if ($userDate > strtotime('09:00') && $userDate < strtotime('17:00')){
+>>>>>>> b7d5da2151da4478df3e3a16b90af65d8bf44783
 					$data=array(
 			            	array(
 			            		'rService' => $this->input->post('rOptions1'),
