@@ -20,49 +20,62 @@ class Formsub extends CI_Controller{
 	            }
             else
 	            {
-	            //inserts options 1~5 within database
 	    		if ($this->input->post()){
-	    		$data=array(
-	            	array(
-	            		'rService' => $this->input->post('rOptions1'),
-	            		'rStaff' => $this->input->post('rStaff1'),
-	            		'date' => $this->input->post('date'),
-	            		'time' => $this->input->post('appTime'),
-	            		'username' => $this->session->userdata('username')
-	            		),
-	            	array(
-	            		'rService' => $this->input->post('rOptions2'),
-	            		'rStaff' => $this->input->post('rStaff2'),
-	            		'date' => $this->input->post('date'),
-	            		'time' => $this->input->post('appTime'),
-	            		'username' => $this->session->userdata('username')
-	            		),
-	            	array(
-	            		'rService' => $this->input->post('rOptions3'),
-	            		'rStaff' => $this->input->post('rStaff3'),
-	            		'date' => $this->input->post('date'),
-	            		'time' => $this->input->post('appTime'),
-	            		'username' => $this->session->userdata('username')
-	            		),
-	            	array(
-	            		'rService' => $this->input->post('rOptions4'),
-	            		'rStaff' => $this->input->post('rStaff4'),
-	            		'date' => $this->input->post('date'),
-	            		'time' => $this->input->post('appTime'),
-	            		'username' => $this->session->userdata('username')
-	            		),
-	            	array(
-	            		'rService' => $this->input->post('rOptions5'),
-	            		'rStaff' => $this->input->post('rStaff5'),
-	            		'date' => $this->input->post('date'),
-	            		'time' => $this->input->post('appTime'),
-	            		'username' => $this->session->userdata('username')
-	            		)
-	            );
-	    			//pass to model User_models
-	            	$this->User_models->insert_reservation($data);
-		            }    
-    		}
+			    	$userDate = strtotime($this->input->post('appTime'));
+			        if ($userDate > strtotime('09:00') && $userDate < strtotime('17:00')){
+					$data=array(
+			            	array(
+			            		'rService' => $this->input->post('rOptions1'),
+			            		'rStaff' => $this->input->post('rStaff1'),
+			            		'date' => $this->input->post('date'),
+			            		'time' => $this->input->post('appTime'),
+			            		'username' => $this->session->userdata('username'),
+			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		),
+			            	array(
+			            		'rService' => $this->input->post('rOptions2'),
+			            		'rStaff' => $this->input->post('rStaff2'),
+			            		'date' => $this->input->post('date'),
+			            		'time' => $this->input->post('appTime'),
+			            		'username' => $this->session->userdata('username'),
+			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		),
+			            	array(
+			            		'rService' => $this->input->post('rOptions3'),
+			            		'rStaff' => $this->input->post('rStaff3'),
+			            		'date' => $this->input->post('date'),
+			            		'time' => $this->input->post('appTime'),
+			            		'username' => $this->session->userdata('username'),
+			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		),
+			            	array(
+			            		'rService' => $this->input->post('rOptions4'),
+			            		'rStaff' => $this->input->post('rStaff4'),
+			            		'date' => $this->input->post('date'),
+			            		'time' => $this->input->post('appTime'),
+			            		'username' => $this->session->userdata('username'),
+			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		),
+			            	array(
+			            		'rService' => $this->input->post('rOptions5'),
+			            		'rStaff' => $this->input->post('rStaff5'),
+			            		'date' => $this->input->post('date'),
+			            		'time' => $this->input->post('appTime'),
+			            		'username' => $this->session->userdata('username'),
+			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		)
+			            );
+			    			//pass to model User_models
+			            	$this->User_models->insert_reservation($data);
+			            }
+	    				else
+	    				{
+	    					$this->session->set_flashdata('timeError', 'Please enter time between 9AM and 5PM!');
+			            	redirect('Main/reservation');
+			            	exit;
+	    				}
+		           }    
+    			}
     		$this->session->set_flashdata('rSuccess', 'You have successfully booked an appointment!');
     		redirect("Main/profile");
     }

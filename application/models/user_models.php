@@ -65,7 +65,14 @@ class User_models extends CI_Model
         return $query->result();
     }
 
-    //clears whitespace from insert_reservation
+    //clears (NULL) data from reservation table
+    function clearNullData()
+    {
+        $this->db->where('rService');
+        $this->db->delete('reservation');
+    }
+
+    //clears whitespace from reservation table
     function clearEmptyData()
     {
         $this->db->where('rService', '');
@@ -154,18 +161,25 @@ class User_models extends CI_Model
         $this->db->set($data)->where('id', $id)->update('reservation', $data);
         redirect('Main/admin');
     }
-
+    //edit service items
+   function editService($data, $id){
+        $this->db->where('id', $id);
+        $this->db->update('site_services', $data);
+     }
     //get all available services
     function getAvailableServices(){
-        $this->db->select("sService, sPrice, sCategory");
+        $this->db->select("sService, sPrice, sCategory, id");
         $query = $this->db->get('site_services');
         return $query->result();
     }
-
     //inserts new service into 'site_services' db
     function addService($data){
         $this->db->insert('site_services', $data);
         redirect('Main/adminEditServices');
+    }
+    
+    function deleteService($id){
+        $this->db->where('id', $id)->delete('site_services');
     }
 }
 ?>

@@ -42,8 +42,6 @@
 
 		//list of services
 		public function services($page = 'services'){
-			$query = $this->user_models->getAvailableServices();
-			$data['servicesRow'] = $query;
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/'.$page;
 			$this->load->view('master/layout',$data);
@@ -95,6 +93,7 @@
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/' .$page;
 			$this->load->view('master/layout',$data);
+
 		}
 
 		//customers cancelled reservation
@@ -111,6 +110,8 @@
 		public function admin($page = 'admin'){
 			//clears generated whitespace by reservation
 			$this->user_models->clearEmptyData();
+			//clears null data
+			$this->user_models->clearNullData();
 			//grabs pending reservations
 			$query = $this->user_models->getPendingReservationAdmin();
 			$data['resRow'] = $query;
@@ -130,7 +131,7 @@
 			$this->load->view('master/layout',$data);			
 		}
 
-		public function adminEditServices($page ='adminEditServices'){
+			public function adminEditServices($page ='adminEditServices'){
 			$query = $this->user_models->getAvailableServices();
 			$data['servicesData'] = $query;
 			$data['title'] = "JO n Jud8 Salon";
