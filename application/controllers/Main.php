@@ -42,6 +42,8 @@
 
 		//list of services
 		public function services($page = 'services'){
+			$query = $this->user_models->getAvailableServices();
+			$data['servicesRow'] = $query;
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/'.$page;
 			$this->load->view('master/layout',$data);
@@ -85,7 +87,7 @@
 
 
 		//viewing customers reservation status
-		public function profile($page = 'profile'){
+		public function pendingReservationCustomer($page = 'pendingReservationCustomer'){
 			$this->user_models->clearEmptyData();
 			//grabs pending reservation to be viewed by customer
 			$query = $this->user_models->getPendingReservation();
@@ -93,11 +95,20 @@
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/' .$page;
 			$this->load->view('master/layout',$data);
+		}
 
+		public function bookedReservationCustomer($page = 'bookedReservationCustomer'){
+			$this->user_models->clearEmptyData();
+			//grabs pending reservation to be viewed by customer
+			$query = $this->user_models->getBookedReservation();
+			$data['resRow'] = $query;
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout',$data);
 		}
 
 		//customers cancelled reservation
-		public function profile2($page ='profile2'){
+		public function cancelledReservationCustomer($page ='cancelledReservationCustomer'){
 			$this->user_models->clearEmptyData2();
 			$query = $this->user_models->getCancelledReservation();
 			$data['resRow'] = $query;
@@ -119,8 +130,26 @@
 			$data['content'] = 'content/' .$page;
 			$this->load->view('master/layout', $data);
 		}
+
+		public function pendingReservation($page = 'pendingReservation'){
+			//grabs pending reservations
+			$query = $this->user_models->getPendingReservationAdmin();
+			$data['resRow'] = $query;
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout', $data);
+		}
+
+		public function bookedReservation($page = 'bookedReservation'){
+			//grab booked reservations
+			$query = $this->user_models->getBookedReservationAdmin();
+			$data['resRow'] = $query;
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout', $data);
+		}
 		//admin view to check cancelled reservations
-		public function admin2($page ='admin2'){
+		public function cancelledReservation($page ='cancelledReservation'){
 			//just to be sure...
 			$this->user_models->clearEmptyData2();
 			//grabs cancelled reservations
@@ -137,6 +166,12 @@
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/' .$page;
 			$this->load->view('master/layout', $data);
+		}
+
+		public function custMessage($page = 'custMessage'){
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout',$data);	
 		}
 	}		
 ?>

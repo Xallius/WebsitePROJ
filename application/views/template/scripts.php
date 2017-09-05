@@ -5,6 +5,7 @@
 <script>  
     $(document).ready(function() {
     $('select').material_select();
+    $(".dropdown-button").dropdown();
     });
 </script>
 <script> //datepicker reservation

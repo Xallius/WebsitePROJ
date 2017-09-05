@@ -3,25 +3,7 @@ body{
     background-repeat: repeat;
 }
 
-.navbar-default {
-    background-color:  #ff79b0;
-    margin: 0;
-    z-index: 5;
-}
-.nav.navbar-nav {
-    width: 100%;
-}
-.nav.navbar-nav > li {
-    display: inline-block;
-    }
-.nav.navbar-nav > li > a {
-    color: white;
-    font-size: 25px;
-    font-family: 'IM Fell Great Primer SC', serif;
-}
-.nav.nav-tabs{
-    
-}
+
 .tab-content {
     background-color: white;
     padding: inherit;
@@ -30,11 +12,7 @@ body{
     margin-top: 5%;
    
 }
-.nav-tabs > li > a{
-    color: #c60055;
-    font-family: serif;
-    font-size: 20px;
-}
+
 
 #acc1 {
     font-family: serif;
@@ -81,19 +59,18 @@ padding:1px;
 
 
 #button1{
-    
     margin-left: 76%;
     background: #c60055;
-    
-    
 }
 #button2{
  border: 1px solid #c60055;
     background-color: white;
-    color: #c60055;;
+    color: #c60055;
     font-family: serif;
 }
-
+#button3{
+       padding: 10%;
+   }
 
 
 

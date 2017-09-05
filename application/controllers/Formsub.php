@@ -87,5 +87,9 @@ class Formsub extends CI_Controller{
 
     public function accept_row($id){
     		$this->User_models->acceptRow($id);
-    }
+	}
+	
+	public function send_message(){
+			$this->User_models->sendMessage();
+	}
 }

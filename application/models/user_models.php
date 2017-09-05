@@ -61,10 +61,19 @@ class User_models extends CI_Model
     {
         $this->db->select("rService, rStaff, date, time, id, rStatus")
                 ->where("username", $this->session->userdata('username'));
+        $this->db->where("rStatus", "0");
         $query = $this->db->get('reservation');
         return $query->result();
     }
 
+    function getBookedReservation()
+    {
+        $this->db->select("rService, rStaff, date, time, id, rStatus")
+                ->where("username", $this->session->userdata('username'));
+                $this->db->where("rStatus", "1");
+        $query = $this->db->get('reservation');
+        return $query->result();
+    }
     //clears (NULL) data from reservation table
     function clearNullData()
     {
@@ -141,11 +150,20 @@ class User_models extends CI_Model
     //pending reservations for admin
     function getPendingReservationAdmin()
     {
-        $this->db->select("rService, rStaff, date, time, id, rStatus, username");
+        $this->db->select("rService, rStaff, date, time, id, rStatus, username")
+                ->where("rStatus", "0");
         $query = $this->db->get('reservation');
         return $query->result();
     }
 
+    //booked reservations for admin
+    function getBookedReservationAdmin()
+    {
+        $this->db->select("rService, rStaff, date, time, id, rStatus, username")
+                ->where("rStatus", "1");
+        $query = $this->db->get('reservation');
+        return $query->result();
+    }
     //cancelled reservations for admin
     function getCancelledReservationAdmin()
     {
@@ -180,6 +198,14 @@ class User_models extends CI_Model
     
     function deleteService($id){
         $this->db->where('id', $id)->delete('site_services');
+    }
+
+    function sendMessage(){
+        $data = array(
+            'custName' => $this->session->userdata('username'),
+            'custMessage' => $this->input->post('textArea1')
+        );
+        $this->db->insert('custmessages', $data);
     }
 }
 ?>

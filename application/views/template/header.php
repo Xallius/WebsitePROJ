@@ -7,34 +7,55 @@
     <link rel="stylesheet" href="<?php echo base_url("assets/css/materialize.css"); ?>" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/sweetalert2.css') ?>" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="<?php echo base_url('iconfont/material-icons.css') ?>" media="screen, projection" />
 </head>
 <body>
+
+<!-- Dropdown for CMS -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Home</a></li>
+  <li><a href="#!">About Us</a></li>
+  <li><a href="#!">Services</a></li>
+  <li><a href="#!">Reservations</a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+    <li><a href="<?php echo base_url('Main/pendingReservation'); ?>">Pending <span class="new badge">10</span></a></li>
+    <li><a href="<?php echo base_url('Main/bookedReservation'); ?>">Booked <span class="new badge">9</span></a></li>
+    <li><a href="<?php echo base_url('Main/cancelledReservation'); ?>">Cancelled <span class="new badge">8</span></a></li>
+</ul>
+<ul id="dropdown3" class="dropdown-content">
+  <li><a href="<?php echo base_url('Main/pendingReservationCustomer'); ?>">Pending</a></li>
+  <li><a href="<?php echo base_url('Main/bookedReservationCustomer'); ?>">Booked</a></li>
+  <li><a href="<?php echo base_url('Main/cancelledReservationCustomer'); ?>">Cancelled</a></li>
+</ul>
     <!-- this is the navbar.. -->
-    <div id="navbar">
-        <nav class="navbar navbar-default navbar-static-top" role="navigation">
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="<?php echo base_url('Main'); ?>">Home</a></li>
-                    <li><a href="<?php echo base_url('Main/about'); ?>">About Us</a></li>
-                    <li><a href="<?php echo base_url('Main/services'); ?>">Services</a></li>
-                    <li><a href="<?php if (!$this->session->userdata('login')){echo '#';} else{ echo base_url('Main/reservation');} ?>">Reservations</a></li>
-                    <li><a href="<?php echo base_url('Main/gallery'); ?>">Gallery</a></li>
-                    <!-- redirects to customer profile -->
-                    <?php if ($this->session->userdata('login')){ ?>
-                        <?php if ($this->session->userdata('uid') == 0){ ?>
-                            <li style="float:right;"><a href="<?php echo base_url('Main/profile'); ?>">Hello <?php echo $this->session->userdata('uname'); ?></a></li>
-                            <li style="float:right;"><a href="<?php echo base_url('Main/logout'); ?>">Logout</a></li>
+<div class="nav-wrapper">
+    <nav role="navigation">
+            <ul>
+                <li><a href="<?php echo base_url('Main'); ?>">Home</a></li>
+                <li><a href="<?php echo base_url('Main/about'); ?>">About Us</a></li>
+                <li><a href="<?php echo base_url('Main/services'); ?>">Services</a></li>
+                
+                <?php if ($this->session->userdata('login')){ ?>
+                <?php if ($this->session->userdata('uid') == 0){ ?>
+                <!-- redirects to customer profile -->
+                <li><a href="<?php if (!$this->session->userdata('login')){echo '#';} else{ echo base_url('Main/reservation');} ?>">Reservations</a></li>
+                        <li style="float:right;"><a href="<?php echo base_url('Main/logout'); ?>">Logout</a></li>
+                        <li style="float:right;"><a class="dropdown-button" href="#!" data-activates="dropdown3">Appointments<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li style="float:right;"><a href="<?php echo base_url('Main/custMessage'); ?>"><i class="material-icons">mail</i></a></li>
                     <!-- redirects to admin -->
                         <?php } elseif ($this->session->userdata('uid') == 1) { ?>
-                            <li style="float:right;"><a href="<?php echo base_url('Main/admin'); ?>">Hello <?php echo $this->session->userdata('uname'); ?></a></li>
+                            <li><a href="<?php echo base_url('Main/dashboard'); ?>">Dashboard</a></li>
+                            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Content Management<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Appointments<i class="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a href="<?php echo base_url('Main/adminMessages'); ?>">Messages</a></li>
                             <li style="float:right;"><a href="<?php echo base_url('Main/logout'); ?>">Logout</a></li>
                         <?php } ?>
                     <?php } else { ?>
                     <!-- if no one is logged in, display signup and login button -->
-                    <li style="float:right;"><a id= acc1 href="<?php echo base_url('Main/signup'); ?>">Sign Up</a></li>
-                    <li style="float:right;"><a id= acc2 href="<?php echo base_url('Main/login'); ?>">Log-in</a></li>
+                    <li style="float:right;"><a href="<?php echo base_url('Main/signup'); ?>">Sign Up</a></li>
+                    <li style="float:right;"><a href="<?php echo base_url('Main/login'); ?>">Log-in</a></li>
                     <?php }?>
                 </ul>
-            </div>
         </nav>
-    </div>
+</div>
