@@ -14,7 +14,10 @@
 				<th>Service Availed</th>
 				<th>Staff Requested</th>
 				<th>Date</th>
-				<th>Time</th>
+				<th>Start Time</th>
+				<th>End Time</th>
+				<th>Duration</th>
+				<th>Companions</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -23,7 +26,10 @@
 				<td><?php echo $item->rService; ?></td>
 				<td><?php echo $item->rStaff; ?></td>
 				<td><?php echo $item->date; ?></td>
-				<td><?php echo $item->time; ?></td>
+				<td><?php echo date("g:i a", strtotime($item->rStartTime)); ?></td>
+				<td><?php echo date("g:i a", strtotime($item->rEndTime)); ?></td>
+				<td><?php echo date("g", strtotime($item->duration))." hours"; ?></td>
+				<td><?php echo $item->companion; ?></td>
 			</tr>
 		<?php endforeach; ?>
 		</tbody>

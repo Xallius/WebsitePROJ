@@ -59,7 +59,7 @@ class User_models extends CI_Model
     //grabs pending reservation 
     function getPendingReservation()
     {
-        $this->db->select("rService, rStaff, date, time, id, rStatus")
+        $this->db->select("rService, rStaff, date, time, id, rStatus, datetime, rStartTime, rEndTime, duration, companion")
                 ->where("username", $this->session->userdata('username'));
         $this->db->where("rStatus", "0");
         $query = $this->db->get('reservation');
@@ -68,7 +68,7 @@ class User_models extends CI_Model
 
     function getBookedReservation()
     {
-        $this->db->select("rService, rStaff, date, time, id, rStatus")
+        $this->db->select("rService, rStaff, date, time, id, rStatus, datetime, rStartTime, rEndTime, duration, companion")
                 ->where("username", $this->session->userdata('username'));
                 $this->db->where("rStatus", "1");
         $query = $this->db->get('reservation');
@@ -98,7 +98,7 @@ class User_models extends CI_Model
     //grabs cancelled reservations
     function getCancelledReservation()
     {
-        $this->db->select("rService, rStaff, date, time, id")
+        $this->db->select("rService, rStaff, date, time, id, rStatus, datetime, rStartTime, rEndTime, duration, companion")
                 ->where("username", $this->session->userdata('username'));
         $query = $this->db->get('creservation');
         return $query->result();
@@ -150,7 +150,7 @@ class User_models extends CI_Model
     //pending reservations for admin
     function getPendingReservationAdmin()
     {
-        $this->db->select("rService, rStaff, date, time, id, rStatus, username")
+        $this->db->select("rService, rStaff, date, time, id, rStatus, datetime, rStartTime, rEndTime, duration, companion")
                 ->where("rStatus", "0");
         $query = $this->db->get('reservation');
         return $query->result();
@@ -159,7 +159,7 @@ class User_models extends CI_Model
     //booked reservations for admin
     function getBookedReservationAdmin()
     {
-        $this->db->select("rService, rStaff, date, time, id, rStatus, username")
+        $this->db->select("rService, rStaff, date, time, id, rStatus, datetime, rStartTime, rEndTime, duration, companion")
                 ->where("rStatus", "1");
         $query = $this->db->get('reservation');
         return $query->result();
@@ -167,7 +167,7 @@ class User_models extends CI_Model
     //cancelled reservations for admin
     function getCancelledReservationAdmin()
     {
-        $this->db->select("rService, rStaff, date, time, id, rStatus, username");
+        $this->db->select("rService, rStaff, date, time, id, rStatus, datetime, rStartTime, rEndTime, duration, companion");
         $query = $this->db->get('creservation');
         return $query->result();
     }

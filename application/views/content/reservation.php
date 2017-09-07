@@ -1,5 +1,3 @@
-
-
 <?php $message = $this->session->flashdata('trymsg');
 $timeMess = $this->session->flashdata('timeError');
 if (isset($message)): ?>
@@ -156,7 +154,19 @@ if (isset($message)): ?>
                     </div>
                 </div>
                 <div class="row">
-                    <button class="col s3 offset-s4 btn pink waves-effect waves-light" type="submit" name="appSubmit">Submit</button>
+                <div class="input-field col s5">
+                <name>Number of Companions:</name>
+                <select name="companion">
+                        <option value="None">None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                </select>
+                </div>
+                </div>
+                <div class="row">
+                    <button class="col s3 offset-s4 btn pink waves-effect waves-light" type="submit" name="appSubmit">Submit</button>      
                 </div>
                 <?php echo form_close(); ?>
         </div>
