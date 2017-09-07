@@ -89,6 +89,7 @@
 		//viewing customers reservation status
 		public function pendingReservationCustomer($page = 'pendingReservationCustomer'){
 			$this->user_models->clearEmptyData();
+			$this->user_models->clearNullData();
 			//grabs pending reservation to be viewed by customer
 			$query = $this->user_models->getPendingReservation();
 			$data['resRow'] = $query;
@@ -169,6 +170,12 @@
 		}
 
 		public function custMessage($page = 'custMessage'){
+			$data['title'] = "JO n Jud8 Salon";
+			$data['content'] = 'content/' .$page;
+			$this->load->view('master/layout',$data);	
+		}
+
+		public function dashboard($page = 'dashboard'){
 			$data['title'] = "JO n Jud8 Salon";
 			$data['content'] = 'content/' .$page;
 			$this->load->view('master/layout',$data);	

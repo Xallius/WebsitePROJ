@@ -6,7 +6,15 @@ class Formsub extends CI_Controller{
         parent::__construct();
         $this->load->model('User_models');
     }
+    public function addTime (string $rOptionNum, string $serviceName, string $hourAdd){
+    	
+    	$optionValue = $this->input->post($rOptionNum);
+    	if ($optionValue === $serviceName){
+    		$starttime = date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')));
 
+    		$addedTime = date('Y-m-d H:i:s',strtotime($hourAdd,strtotime($startTime)));
+    	}
+    }
     public function check_reservation(){
 
     		//validate if one of the options has value
@@ -22,9 +30,17 @@ class Formsub extends CI_Controller{
 	            {
 	            
 	    		if ($this->input->post()){
-	    		
+	    				$duration = strtotime('00:00:00');
 			    		$userDate = strtotime($this->input->post('appTime'));
+			    		$starttime = date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')));
 			            if ($userDate > strtotime('09:00') && $userDate < strtotime('17:00')){
+			            	if ($this->input->post('rOptions1') === "Rebond"){
+				    		$starttime = date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')));
+
+				    		$addedTime = date('Y-m-d H:i:s',strtotime('+1 hour',strtotime($starttime)));
+				    		$newDuration = date('H:i:s', strtotime('-1 hour +30 minutes',strtotime($duration)));
+				    		}
+				    		addTime($this->input->post('rOptions2'), 'Rebond');
 					$data=array(
 			            	array(
 			            		'rService' => $this->input->post('rOptions1'),
@@ -32,7 +48,8 @@ class Formsub extends CI_Controller{
 			            		'date' => $this->input->post('date'),
 			            		'time' => $this->input->post('appTime'),
 			            		'username' => $this->session->userdata('username'),
-			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		'datetime' => $addedTime,
+			            		'duration' => $newDuration
 			            		),
 			            	array(
 			            		'rService' => $this->input->post('rOptions2'),
@@ -40,7 +57,8 @@ class Formsub extends CI_Controller{
 			            		'date' => $this->input->post('date'),
 			            		'time' => $this->input->post('appTime'),
 			            		'username' => $this->session->userdata('username'),
-			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		'datetime' => $addedTime2,
+			            		'duration' => $newDuration
 			            		),
 			            	array(
 			            		'rService' => $this->input->post('rOptions3'),
@@ -48,7 +66,8 @@ class Formsub extends CI_Controller{
 			            		'date' => $this->input->post('date'),
 			            		'time' => $this->input->post('appTime'),
 			            		'username' => $this->session->userdata('username'),
-			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime'))),
+			            		'duration' => $newDuration
 			            		),
 			            	array(
 			            		'rService' => $this->input->post('rOptions4'),
@@ -56,7 +75,8 @@ class Formsub extends CI_Controller{
 			            		'date' => $this->input->post('date'),
 			            		'time' => $this->input->post('appTime'),
 			            		'username' => $this->session->userdata('username'),
-			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime'))),
+			            		'duration' => $newDuration
 			            		),
 			            	array(
 			            		'rService' => $this->input->post('rOptions5'),
@@ -64,7 +84,8 @@ class Formsub extends CI_Controller{
 			            		'date' => $this->input->post('date'),
 			            		'time' => $this->input->post('appTime'),
 			            		'username' => $this->session->userdata('username'),
-			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime')))
+			            		'datetime' => date('Y-m-d H:i:s',strtotime($this->input->post('date').' '.$this->input->post('appTime'))),
+			            		'duration' => $newDuration
 			            		)
 			            );
 			    			//pass to model User_models
@@ -79,7 +100,7 @@ class Formsub extends CI_Controller{
 		           }    
     			}
     		$this->session->set_flashdata('rSuccess', 'You have successfully booked an appointment!');
-    		redirect("Main/profile");
+    		redirect("Main/pendingReservationCustomer");
     }
     public function delete_row($id){
     		$this->User_models->deleteRow($id);
